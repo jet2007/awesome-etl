@@ -17,10 +17,11 @@ A curated list of notable ETL (extract, transform, load) frameworks, libraries a
 * [awesome-pipeline](https://github.com/pditommaso/awesome-pipeline)
 
 ## Workflow Management/Engines
-* [Airflow](https://github.com/airbnb/airflow) - "Use airflow to author workflows as directed acyclic graphs (DAGs) of tasks. The airflow scheduler executes your tasks on an array of workers while following the specified dependencies. Rich command line utilities make performing complex surgeries on DAGs a snap. The rich user interface makes it easy to visualize pipelines running in production, monitor progress, and troubleshoot issues when needed."
+* [Airflow](https://github.com/apache/airflow) - "Use airflow to author workflows as directed acyclic graphs (DAGs) of tasks. The airflow scheduler executes your tasks on an array of workers while following the specified dependencies. Rich command line utilities make performing complex surgeries on DAGs a snap. The rich user interface makes it easy to visualize pipelines running in production, monitor progress, and troubleshoot issues when needed."
 * [Azkaban](https://azkaban.github.io/) - "a batch workflow job scheduler created at LinkedIn to run Hadoop jobs. Azkaban resolves the ordering through job dependencies and provides an easy to use web user interface to maintain and track your workflows."
 * [Dray.it](http://dray.it/) - "Docker workflow engine. Allows users to separate a workflow into discrete steps each to be handled by a single container."
 * [Luigi](https://github.com/spotify/luigi) - "a Python module that helps you build complex pipelines of batch jobs. It handles dependency resolution, workflow management, visualization etc. It also comes with Hadoop support built in."
+* [Mara](https://github.com/mara/data-integration) - "A lightweight opinionated ETL framework, halfway between plain scripts and Apache Airflow"
 * [Pinball](https://github.com/pinterest/pinball) - "a scalable workflow management platform developed at Pinterest. It is built based on layered approach."
 * [TaskFlow](https://wiki.openstack.org/wiki/TaskFlow) - "allows the creation of lightweight task objects and/or functions that are combined together into flows (aka: workflows) in a declarative manner. It includes engines for running these flows in a manner that can be stopped, resumed, and safely reverted."
 * [Toil](https://toil.readthedocs.io/en/latest/) - Similar to Luigi, jobs are classes with a run method. Supports executing jobs on other machines (workers) which can include AWS spot instances.
@@ -28,10 +29,10 @@ A curated list of notable ETL (extract, transform, load) frameworks, libraries a
 ## Job Scheduling
 * [Chronos](https://github.com/mesos/chronos) - "a distributed and fault-tolerant scheduler that runs on top of Apache Mesos that can be used for job orchestration."
 * [Dagobah](https://github.com/thieman/dagobah) - "a simple dependency-based job scheduler written in Python. Dagobah allows you to schedule periodic jobs using Cron syntax. Each job then kicks off a series of tasks (subprocesses) in an order defined by a dependency graph you can easily draw with click-and-drag in the web interface."
+* [Jenkins](https://github.com/jenkinsci/jenkins) - "the leading open-source automation server. Built with Java, it provides over 1000 plugins to support automating virtually anything, so that humans can actually spend their time doing things machines cannot."
 
 ## Java
-* [DataPipeLine](https://www.northconcepts.com/) - Java library for running performance oriented flows
-* [GETL](https://sourceforge.net/projects/getl/) - Groovy toolbox for ETL Tasks from practicing architectures
+* [GETL](https://github.com/ascrus/getl) - Groovy toolbox for ETL Tasks from practicing architectures
 * [JSR 352](https://www.jcp.org/en/jsr/detail?id=352) - Java native API for batch processing
 * [Scriptella](http://scriptella.org/) - Java-XML ETL toolbox for every day use.
 * [Spring Batch](http://projects.spring.io/spring-batch/) - ETL on Spring ecosystem
@@ -71,6 +72,7 @@ A curated list of notable ETL (extract, transform, load) frameworks, libraries a
 * [nokogiri](https://github.com/sparklemotion/nokogiri) - an excellent XML parser that "just works"
 * [Square ETL](https://github.com/square/etl)
 * [Sequel](https://github.com/jeremyevans/sequel) - "The Database Toolkit for Ruby"
+* [Embulk](https://github.com/embulk/embulk) - "a parallel bulk data loader that helps data transfer between various storages, databases, NoSQL and cloud services."
 
 ## Go
 * [Crunch](https://github.com/jondot/crunch) - "A fast to develop, fast to run, Go based toolkit for ETL and feature extraction on Hadoop."
@@ -91,13 +93,12 @@ A curated list of notable ETL (extract, transform, load) frameworks, libraries a
 * http://tech.adroll.com/blog/data/2015/10/15/luigi.html?adrolldev
 
 ## Cloud Services
-* [Alterxy](http://www.alteryx.com/) - Cloud ETL tool with an interface similar to GUI ETL tools.
+* [Alteryx](http://www.alteryx.com/) - Cloud ETL tool with an interface similar to GUI ETL tools.
 * [AWS Data Pipeline](https://aws.amazon.com/datapipeline/) - "a web service that helps you reliably process and move data between different AWS compute and storage services, as well as on-premise data sources, at specified intervals."
 * [AWS Glue](https://aws.amazon.com/glue/) - AWS Glue generates the code (using Python and Spark) to execute your data transformations and data loading processes.
 * [Amazon Simple Workflow Service (SWF)](https://aws.amazon.com/swf/) - "helps developers build, run, and scale background jobs that have parallel or sequential steps. You can think of Amazon SWF as a fully-managed state tracker and task coordinator in the Cloud."
 * [AWS Batch](https://aws.amazon.com/batch/) - Allows executing jobs as containerized applications running on Amazon ECS. Also includes features for dynamically bidding for Spot Instances, integration with existing workflow engines, scheduling, monitoring, dependency modeling, and dynamic scaling/provisioning based on amount of work.
 * [Google Dataflow](https://cloud.google.com/dataflow/what-is-google-cloud-dataflow) - "Google Cloud Dataflow provides a simple, powerful model for building both batch and streaming parallel data processing pipelines."
-* [Snaplogic](http://www.snaplogic.com/) - "a self-upgrading, elastic execution grid that streams data between applications, databases, files, social and big data sources."
 
 ## Big Data (Hadoop Stack)
 * [Pig](https://pig.apache.org/) - "a platform for analyzing large data sets that consists of a high-level language for expressing data analysis programs, coupled with infrastructure for evaluating these programs."
@@ -107,7 +108,6 @@ A curated list of notable ETL (extract, transform, load) frameworks, libraries a
 *Warning*: If you're already familiar with a scripting language, GUI ETL tools are not a good replacement for a well structured application written with a scripting language. These tools lack flexibility and are a good example of the ["inner-platform effect"](https://en.wikipedia.org/wiki/Inner-platform_effect). With a large project, you will most likely run into instances where "the tool doesn't do that" and end up implementing something hacky with a script run by the GUI ETL tool. Also, the GUI can conceal complexity and the files these tools generate are impossible to code review. However, the GUI and out-of-the-box functionality can make some tasks simpler, especially for people not comfortable with writing code.
 * [Apache NiFi](https://nifi.apache.org/) - "a rich, web-based interface for designing, controlling, and monitoring a dataflow."
 * [Informatica PowerCenter](https://www.informatica.com/products/data-integration/powercenter.html) - "a toolset for establishing and maintaining enterprise-wide data warehouses. It has a customer base of over 5,000 companies."
-* [Jitterbit](http://www.jitterbit.com/) - "commercial software integration product that facilitates transport between legacy, enterprise, and on-demand computing applications."
 * [Microsoft SSIS](https://technet.microsoft.com/en-us/library/ms141026.aspx) - "a component of the Microsoft SQL Server database software that can be used to perform a broad range of data migration tasks."
 * [Pentaho Kettle](http://community.pentaho.com/projects/data-integration/) - The most popular open-source graphical ETL tool.
 * [Talend](https://www.talend.com/products/talend-open-studio) - "an open source application for data integration job design with a graphical development environment"
